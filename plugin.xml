@@ -3,7 +3,7 @@
  Copyright (c) Microsoft Open Technologies, Inc.  All Rights Reserved.
  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
 -->
-<plugin id="cordova-plugin-ms-adal-is-back" version="0.10.10" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+<plugin id="cordova-plugin-ms-adal-is-back2" version="0.10.11" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
     <name>ADAL for Cordova</name>
     <description>Provides Microsoft Azure Active Directory (ADAL) OAuth client.</description>
 
@@ -80,7 +80,16 @@
         <header-file src="src/ios/CordovaAdalUtils.h" />
         <source-file src="src/ios/CordovaAdalUtils.m" />
 
-        <framework src="src/ios/ADAL.framework" custom="true" embed="true" />
+        <!-- <framework src="src/ios/ADAL.framework" custom="true" embed="true" /> -->
+
+        <podspec>
+            <config>
+                <source url="https://cdn.cocoapods.org/"/>
+            </config>
+            <pods use_frameworks="true">
+                <pod name="ADAL" spec="~> 4.0.7"/>
+            </pods>
+        </podspec>
 
         <resource-file src="src/ios/ADALiOS.entitlements" />
         <hook type="after_plugin_install" src="scripts/configureEntitlementsIos.js" />
