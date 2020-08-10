@@ -23,9 +23,6 @@
 
 #import <Foundation/Foundation.h>
 
-#if TARGET_OS_IPHONE
-#import <UIKit/UIKit.h>
-#endif
 
 //! Project version number for ADALFramework.
 FOUNDATION_EXPORT double ADALFrameworkVersionNumber;
@@ -33,14 +30,6 @@ FOUNDATION_EXPORT double ADALFrameworkVersionNumber;
 //! Project version string for ADALFramework.
 FOUNDATION_EXPORT const unsigned char ADALFrameworkVersionString[];
 
-#if TARGET_OS_IPHONE
-//iOS:
-typedef UIWebView WebViewType;
-#else
-//OS X:
-#   include <WebKit/WebKit.h>
-typedef WebView   WebViewType;
-#endif
 
 @class ADAuthenticationResult;
 
