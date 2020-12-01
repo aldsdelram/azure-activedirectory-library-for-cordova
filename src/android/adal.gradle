@@ -1,5 +1,5 @@
 dependencies {
-    implementation('com.microsoft.aad:adal:2.0.0') {}
+    implementation('com.microsoft.aad:adal:3.1.2') {}
 }
 //original: 1.12
 // tried 1.16
