@@ -1,6 +1,9 @@
 dependencies {
-    compile('com.microsoft.aad:adal:3.0.0') {}
+    implementation('com.microsoft.aad:adal:2.0.0') {}
 }
+//original: 1.12
+// tried 1.16
+// compilation error with 2.0.0
 
 android {
     packagingOptions {
