@@ -1,5 +1,5 @@
 dependencies {
-    compile('com.microsoft.aad:adal:1.16.0') {}
+    compile('com.microsoft.aad:adal:2.0.0') {}
 }
 
 android {
